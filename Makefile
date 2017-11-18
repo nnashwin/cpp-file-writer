@@ -1,12 +1,12 @@
 CXX = clang++
 CXXFLAGS = -std=c++11
-MAIN = main.cpp
+MAIN = fileWriter.cpp
 EXE = run.o
-TESTDIR = tests/
+TESTDIR = test/
 TESTFILE = tests.cpp
 TESTRESULT = test.result
 
-make: build run
+make: build buildTest runTest run
 
 build:
 	$(CXX) $(CXXFLAGS) $(MAIN) -o $(EXE)
