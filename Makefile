@@ -6,13 +6,10 @@ TESTDIR = test/
 TESTFILE = tests.cpp
 TESTRESULT = test.result
 
-make: build buildTest runTest run
+make: test build
 
 build:
 	$(CXX) $(CXXFLAGS) $(MAIN) -o $(EXE)
-
-run:
-	./$(EXE)
 
 buildTest:
 	$(CXX) $(TESTDIR)$(TESTFILE) -o $(TESTDIR)$(TESTRESULT)
